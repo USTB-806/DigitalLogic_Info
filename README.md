@@ -2,6 +2,5 @@
 
 Visit our website by the link below
 
-
-[Digital Logic](https://dld-ustb.github.io/DigitalLogic_Info/)
+[Digital Logic](https://ustb-806.github.io/DigitalLogic_Info/#/)
 
