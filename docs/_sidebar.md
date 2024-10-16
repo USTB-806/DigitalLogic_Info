@@ -9,6 +9,7 @@
 	* [Lab5:称量与交流](/module/comminicate_and_weight)
 	* [Lab6:乘法器设计](/module/unsigned_multiplier) 
 * [常见问题](faq)
+* [硅片、电子与后仿真](/module/post_implement_simu)
 * [Logisim补充说明](/module/Lab1QnA)
 * [验收要求](grading)
     * [Lab1:流水灯](/module/led)
