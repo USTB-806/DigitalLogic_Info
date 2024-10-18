@@ -1,4 +1,5 @@
 # lab2 Write-up
+
 > by Zakilim
 
 实验二的内容包括两个，一个是数码管的显示，一个是加法器的设计。
@@ -36,6 +37,7 @@ assign seg = (num == 4'd0) ? 8'b0011_1111:
              (num == 4'd9) ? 8'b0110_1111:
                                           8'b0000_0000;
 ```
+
 这种写法较之`always`，解决了必须要声明为`reg`和可能产生`latch`两大痛点,我本人非常喜欢（
 当然，你需要*注意格式*。否则就会陷入`?:`的地狱
 
@@ -47,14 +49,14 @@ assign seg = (num == 4'd0) ? 8'b0011_1111:
 
 ```verilog
 module add1(
-	input  wire a,
-	input  wire b,
-	input  wire cin,
-	output wire sum,
-	output wire cout
+    input  wire a,
+    input  wire b,
+    input  wire cin,
+    output wire sum,
+    output wire cout
 );
-	assign #4 sum = a ^ b ^ cin;
-	assign #2 cout =  (cin==1)|(cin==0)?(a & cin) | (b & cin)| (a & b):1'bx;
+    assign #4 sum = a ^ b ^ cin;
+    assign #2 cout =  (cin==1)|(cin==0)?(a & cin) | (b & cin)| (a & b):1'bx;
 endmodule
 ```
 
@@ -93,10 +95,10 @@ endmodule
     endgenerate   
 endmodule
 ```
+
 这段代码的效果事实上与手动列出32个加法器的效果是等效的。这种`for`循环被称为生成for(generate-for)，专门用于实例化元件，其中`generate`和`endgenerate`中间包裹的语块被称为生成块，与`always`块和`initial`块为代表的过程块相对应。过程块描述电路的行为，而生成块描述电路结构。
 
 !> 使用for语句必须明确该语句并非被综合成一个循环，无论是此处的generate for还是某些同学可能用到的在always语块当中使用的for
-
 
 ### 串行进位加法器(Ripple-Carry Adder)时延分析
 
@@ -114,14 +116,13 @@ $$T_{rc} = (n-1)T_{carry}+T_{sum}$$
 
 事实上，选择进位加法器一般是将n位加法器进行分组，组内串行进位，组间选择进位。
 
-![](../pic.asset/csadder.jpg)
+![img](../pic.asset/csadder.jpg)
 
 > 引用一张ppt里的图，所以还不赶紧看ppt复习吗
 
 ppt给出了这样一个公式
 
 $$T_{csadder} = t_{setup} + \frac NM t_{carry}+ Mt_{mux}+t_{sum}$$
-
 
 为了真正验证选择加法器的时延，我们重新为选择进位加法器加上两个单位的延迟，为了保证选择进位加法器正常工作，与上图不同的地方在于**第一个组加法器是不包含选择的**。以下的公式推导也基于这一点。
 
@@ -137,10 +138,8 @@ $$T_{csadder} = Mt_{carry} + (\frac NM-1) t_{Mux}$$
 
 最下面一行是分成8组的选择进位加法器，测得时延为$22ns = 7\times2 + 4\times 2$与预期一致
 
-![](../pic.asset/csadder_nogroup.gif)
+![img](../pic.asset/csadder_nogroup.gif)
 
 选择进位加法器为什么能够带来效率的提升呢？
 
 选择进位加法器经过分组后，后面的每一个组并不需要依赖于前一个组的进位信号传入，而是将两种可能的结果计算一遍，而等前面一级的进位信号来时，只要选择正确的输出即可。
-
-
