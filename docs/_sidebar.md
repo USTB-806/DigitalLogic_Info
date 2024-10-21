@@ -4,6 +4,7 @@
 	* [Simulation使用帮助](/module/simulation_help)
 	* [流水灯](/module/running_led)
 	* [加法器与数码管](/module/adder)
+	* [译码器与ALU](/module/)
 	* [Lab3:流动的学号](/module/sequence_logic_help)
 	* [Lab4:芝麻开门](/module/open_sesame)
 	* [Lab5:称量与交流](/module/comminicate_and_weight)
