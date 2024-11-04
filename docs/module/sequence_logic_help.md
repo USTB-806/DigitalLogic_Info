@@ -2,6 +2,8 @@
 
 > by 陈欣杰 计科224
 
+!> 来自助教的提醒：请勿抄袭，违纪者严肃处理！
+
 ## 主要功能
 
 - 8个数码管全部具有显示和写入双模式
@@ -297,5 +299,3 @@
 > 全部代码
 
 [https://github.com/Xinjie-Chen/Digital-Logic/tree/main/lab3](https://github.com/Xinjie-Chen/Digital-Logic/tree/main/lab3)
-
-!> 来自助教的提醒：请勿抄袭，违纪者严肃处理！
