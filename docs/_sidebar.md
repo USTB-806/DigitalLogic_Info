@@ -3,6 +3,7 @@
 	* [从0开始的FPGA生活](/module/lab0_begin)
 	* [Simulation使用帮助](/module/simulation_help)
 	* [流水灯](/module/running_led)
+	* [变速流水灯](/module/running_led_var_speed)
 	* [加法器与数码管](/module/adder)
 	* [译码器与ALU](/module/decoder_and_alu_help)
 	* [Lab3:流动的学号](/module/sequence_logic_help)
