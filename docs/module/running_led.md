@@ -79,26 +79,26 @@ module counter(
 
   always @(posedge clk or posedge rst) begin
     if (rst) 
-        counter_first <= 14'b0;
+        counter_first <= 14'd0;
     else 
         if (counter_first == 14'd10000) 
-            counter_first <= 14'b0;
+            counter_first <= 14'd0;
         else 
             counter_first <= counter_first +1;
   end
 
   always @(posedge clk or posedge rst) begin
     if (rst) 
-        counter_second <= 14'b0;
+        counter_second <= 14'd0;
     else        
-        if (counter_second == 14'b10000) 
-            counter_second <= 14'b0;
+        if (counter_second == 14'd10000) 
+            counter_second <= 14'd0;
         else 
-            if (counter_first == 14'b10000) 
+            if (counter_first == 14'd10000) 
             counter_second <= counter_second + 1;
   end
 
-  assign clk_bps = counter_second == 14'b10000;
+  assign clk_bps = counter_second == 14'd10000;
 
 endmodule
 ```
