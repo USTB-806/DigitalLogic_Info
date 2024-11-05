@@ -6,6 +6,7 @@
 	* [变速流水灯](/module/running_led_var_speed)
 	* [加法器与数码管](/module/adder)
 	* [译码器与ALU](/module/decoder_and_alu_help)
+	* [ALU实验帮助](/module/alu_help)
 	* [Lab3:流动的学号](/module/sequence_logic_help)
 	* [Lab4:芝麻开门](/module/open_sesame)
 	* [Lab5:称量与交流](/module/comminicate_and_weight)
