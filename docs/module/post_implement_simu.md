@@ -19,9 +19,9 @@ clk，我们可以直接测试时钟频率。而组合逻辑电路没有时钟�
 到达上升沿时，输入寄存器将值传递给组合逻辑电路进行运算，当下一个 clk
 上升沿到来后，如果组合逻辑电路已经完成运算，那么输出寄存器将保存组合逻辑电路的输出值，
 我们也可以得知待测试电路的延迟不超过当前的时钟周期；否则，输出的寄存器无法按时更新，则产生时序违例。
-以下为测试加法器的Verilog代码，根据实际情况修改：
+以下为测试加法器的 Verilog 代码，根据实际情况修改：
 
-        module test_csadd32 (
+   plain     module test_csadd32 (
             input  wire        clk,
             input  wire [31:0] a,
             input  wire [31:0] b,
@@ -30,7 +30,7 @@ clk，我们可以直接测试时钟频率。而组合逻辑电路没有时钟�
             output reg         co
         );
         
-            reg  [31:0] a_reg;
+   plain         reg  [31:0] a_reg;
             reg  [31:0] b_reg;
             reg         ci_reg;
             wire [31:0] s_wire;
@@ -59,7 +59,7 @@ clk，我们可以直接测试时钟频率。而组合逻辑电路没有时钟�
 
 新建一个约束文件`clock.xdc`，粘贴如下代码：
 
-    create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports {clk}];
+   plain create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports {clk}];
 
 这段代码的意思是，将 clk 端口设置为时钟信号，并将其时钟周期设置为
 10ns，即 100MHz 的时钟频率。
@@ -70,7 +70,7 @@ clk，我们可以直接测试时钟频率。而组合逻辑电路没有时钟�
 
 ![image](../pic.asset/fig.g.2.png)
 
-打开Flow Navigator，点击 Report Timing Summary
+打开 Flow Navigator，点击 Report Timing Summary
 即可查看电路的时序信息，点击 Report Utilization
 即可查看电路的资源使用情况。 在 .xdc 文件中设置时钟频率为 100MHZ，点击
 Report Timing Summary 后，选择进位加法器的时序情况如下：
@@ -99,7 +99,7 @@ Logic Delay 和 Net Delay
 
 ![image](../pic.asset/fig.g.5.png)
 
-最终的结果应该为：逐位进位加法器的WNS明显小于选择进位加法器的WNS。
+最终的结果应该为：逐位进位加法器的 WNS 明显小于选择进位加法器的 WNS。
 
 ## 术语说明
 

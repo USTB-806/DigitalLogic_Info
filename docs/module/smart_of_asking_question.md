@@ -2,7 +2,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/pulls)
 
-***本文为原仓库为 ryanhanwu 的How-To-Ask-Questions-The-Smart-Way***
+***本文为原仓库为 ryanhanwu 的 How-To-Ask-Questions-The-Smart-Way***
 
 **How To Ask Questions The Smart Way**
 
@@ -289,7 +289,7 @@ Stack Exchange 已经成长到[超过一百个网站](https://stackexchange.com/
 
 以上几点中，当你报告的是你认为可能在代码中的问题时，给黑客一个可以重现你的问题的环境尤其重要。当你这么做时，你得到有效的回答的机会和速度都会大大的提升。
 
-[Simon Tatham](http://www.chiark.greenend.org.uk/~sgtatham/) 写过一篇名为《[如何有效地报告Bug](http://www.chiark.greenend.org.uk/~sgtatham/bugs-cn.html)》的出色文章。强力推荐你也读一读。
+[Simon Tatham](http://www.chiark.greenend.org.uk/~sgtatham/) 写过一篇名为《[如何有效地报告 Bug](http://www.chiark.greenend.org.uk/~sgtatham/bugs-cn.html)》的出色文章。强力推荐你也读一读。
 
 ### 话不在多而在精
 
@@ -331,7 +331,7 @@ Stack Exchange 已经成长到[超过一百个网站](https://stackexchange.com/
 > 我的组装电脑是 FIC-PA2007 主机板搭载 AMD K6/233 CPU（威盛 Apollo VP2 芯片组），
 > 256MB Corsair PC133 SDRAM 内存，在编译内核时，从开机 20 分钟以后就频频产生 SIG11 错误，
 > 但是在头 20 分钟内从没发生过相同的问题。重新启动也没有用，但是关机一晚上就又能工作 20 分钟。
-> 所有内存都换过了，没有效果。相关部分的标准编译记录如下…
+> 所有内存都换过了，没有效果。相关部分的标准……译记录如下…
 
 由于以上这点似乎让许多人觉得难以配合，这里有句话可以提醒你：`所有的诊断专家都来自密苏里州。` 美国国务院的官方座右铭则是：`让我看看`（出自国会议员 Willard D. Vandiver 在 1899 年时的讲话：`我来自一个出产玉米，棉花，牛蒡和民主党人的国家，滔滔雄辩既不能说服我，也不会让我满意。我来自密苏里州，你必须让我看看。`） 针对诊断者而言，这并不是一种怀疑，而只是一种真实而有用的需求，以便让他们看到的是与你看到的原始证据尽可能一致的东西，而不是你的猜测与归纳的结论。所以，大方地展示给我们看吧！
 
@@ -535,7 +535,7 @@ Jeff Bigler 的观察总结和这个相关也值得一读 (**[tact filters](http
 回答：如果你想解决的是 Y ，提问时别给出可能并不恰当的方法。这种问题说明提问者不但对 X 完全无知，也对 Y 要解决的问题糊涂，还被特定形势禁锢了思维。最好忽略这种人，等他们把问题搞清楚了再说。
 
 <a id="q3"></a>
->问题：如何设定我的 shell 提示？？
+> 问题：如何设定我的 shell 提示？？
 
 回答：如果你有足够的智慧提这个问题，你也该有足够的智慧去 [RTFM](#RTFM)，然后自己去找出来。
 
