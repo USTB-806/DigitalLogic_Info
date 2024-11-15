@@ -1,8 +1,10 @@
 # 从简单 ALU 设计学习 Verilog 组合逻辑电路
 
-> **ALU (Arithmetic and Logic Unit)**，
+> by 黄灿
+
+> **ALU (Arithmetic and Logic Unit)** ，
 > 算术逻辑单元，是能实现多组算术运算和逻辑运算的组合逻辑电路。  
-> **组合逻辑电路**，
+> **组合逻辑电路** ，
 > 任意时刻的输出仅仅取决于该时刻的输入，与电路原来的状态无关。
 > *--==无记忆存储功能，对输入立即反馈==*  
 > **Verilog HDL (Hardware Description Language)**
