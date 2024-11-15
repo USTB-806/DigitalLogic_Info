@@ -21,28 +21,33 @@ clk，我们可以直接测试时钟频率。而组合逻辑电路没有时钟�
 我们也可以得知待测试电路的延迟不超过当前的时钟周期；否则，输出的寄存器无法按时更新，则产生时序违例。
 以下为测试加法器的 Verilog 代码，根据实际情况修改：
 
-   plain     module test_csadd32 (
-            input  wire        clk,
-            input  wire [31:0] a,
-            input  wire [31:0] b,
-            input  wire        ci,
-            output reg  [31:0] s,
-            output reg         co
-        );
-        
-   plain         reg  [31:0] a_reg;
-            reg  [31:0] b_reg;
-            reg         ci_reg;
-            wire [31:0] s_wire;
-            wire        co_wire;
-        
-            always @(posedge clk) begin
-                a_reg  <= a;
-                b_reg  <= b;
-                ci_reg <= ci;
-                s      <= s_wire;
-                co     <= co_wire;
-            end
+```verilog
+    module test_csadd32 (
+        input  wire        clk,
+        input  wire [31:0] a,
+        input  wire [31:0] b,
+        input  wire        ci,
+        output reg  [31:0] s,
+        output reg         co
+    );
+```
+
+```verilog
+        reg  [31:0] a_reg;
+        reg  [31:0] b_reg;
+        reg         ci_reg;
+        wire [31:0] s_wire;
+        wire        co_wire;
+```
+
+```verilog
+        always @(posedge clk) begin
+            a_reg  <= a;
+            b_reg  <= b;
+            ci_reg <= ci;
+            s      <= s_wire;
+            co     <= co_wire;
+        end
         
             csadd32 cs (
                 .a (a_reg),
@@ -51,7 +56,8 @@ clk，我们可以直接测试时钟频率。而组合逻辑电路没有时钟�
                 .s (s_wire),
                 .co(co_wire)
             );
-        endmodule
+    endmodule
+```
 
 ## 实验步骤
 
