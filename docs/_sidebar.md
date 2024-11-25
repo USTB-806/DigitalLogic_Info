@@ -9,6 +9,7 @@
 	* [ALU实验帮助](/module/alu_help)
 	* [译码模块实验帮助](/module/id_module_help)
 	* [从ALU学习Verilog](/module/from_ALU_to_verilog)
+	* [数码管驱动](/module/ctrl_seg)
 	* [Lab3:流动的学号](/module/sequence_logic_help)
 	* [Lab4:芝麻开门](/module/open_sesame)
 	* [Lab5:称量与交流](/module/comminicate_and_weight)
