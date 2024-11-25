@@ -17,6 +17,7 @@
 * [硅片、电子与后仿真](/module/post_implement_simu)
 * [阻塞、非阻塞赋值、仿真与综合](/module/synthesis_and_assignments)
 * [Logisim补充说明](/module/Lab1QnA)
+* [PPT 代码注释](/module/ppt_code)
 * [验收要求](grading)
     * [Lab1:流水灯](/module/led)
     * [Lab2:加法器与数码管](/module/combine_logic)
