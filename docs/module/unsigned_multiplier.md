@@ -9,7 +9,7 @@
 在考虑乘法器的设计之前，我们首先可以考虑乘法的运算。在 10 进制下，我们往往会用下面的方式计算乘法
 $$
 \begin{aligned}
-	&1234\\
+ &1234\\
 \times&1221\\
 \hline
 &1234\\
@@ -68,14 +68,13 @@ xy &= \sum_{k=0}^{w-1}(x\times y_k2^k)\\
 \end{aligned}
 $$
 
-
 那么乘法的运算方式就可以用以下的伪代码描述
 
 ```python
 BitVector x,y
 sum = 0
 for i from len(y) - 1 to 0:
-	sum <<=1
+ sum <<=1
     sum += y[i]*x
 return sum
 ```
@@ -87,11 +86,10 @@ BitVector x,y
 sum = 0
 x <<= len(y)
 for i from 0 to len(y)-1:
-	sum += y[i]*x
+ sum += y[i]*x
     sum >>=1
 return sum
 ```
-
 
 这就是循环移位乘法器的设计原理，其实现的其中一种原理图如下
 

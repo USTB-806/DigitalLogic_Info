@@ -1642,7 +1642,6 @@ module regn (bus, in_en, out_en, Clock); // 定义模块 regn
 endmodule // 模块定义结束
 ```
 
-
 ### P6
 
 ```verilog
